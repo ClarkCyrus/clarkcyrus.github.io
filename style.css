@@ -499,6 +499,14 @@ body{
     position: relative;
     display: inline-block;
 }
+.custom-underline2{
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #ffffff; /* Adjust color as needed */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+
+}
 
 .custom-underline::after {
     content: "";
@@ -539,4 +547,34 @@ body{
         width: 165px;
         height: auto;
     }
+}
+
+.custom-accordion-button {
+    background-color: #267bd0; /* Dark background color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove border */
+}
+
+.custom-accordion-button:hover {
+    background-color: #495057; /* Slightly lighter on hover */
+}
+
+.custom-accordion-body {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Dark text color */
+}
+.custom-accordion-header {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove border */
+}
+
+.custom-accordion-header:focus,
+.custom-accordion-header:active {
+    background-color: #495057; /* Same color as hover to remove highlight */
+    color: white;
+    box-shadow: none; /* Remove the default focus outline */
+}
+.custom-accordion-body span{
+    margin: 1rem 0;
 }
