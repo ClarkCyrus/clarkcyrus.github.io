@@ -343,7 +343,7 @@ body{
 }
 .articles_container{
     display: grid;
-    grid-template-columns: repeat(1fr 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     position: relative;
     padding: 1rem 5rem 4rem;
@@ -371,6 +371,7 @@ body{
 .articles_item {
     display: flex;
     position: relative;
+    flex-direction: column;
     width: 100%;
     height: 60%;
     justify-content: center;
@@ -380,29 +381,17 @@ body{
     transition: transform 0.3s ease, background-color 0.3s ease;
     border: 1px solid rgb(34, 34, 34);
   }
-.image_container{
-    margin-left: 1rem;
-    height: 75%;    
-    width: 50%;
-}
-.text_container{
-    height: 100%;
-    width: 65%;
-}
 /* Article Images */
 .image_container img {
     object-fit: cover;
-    width: 275px;
-    height: 160px;
+    width: 100%;
+    height: auto;
     filter: brightness(100%);
     transition: filter 0.3s ease;
 }
 .text_container p{
-    position: absolute;
     align-items: center;
-    top: 46%;
-    transform: translateY(-50%);
-    padding-right: 20px;
+    color: white;
 }
 .articles_context h1:nth-child(1){
     color: yellow;
@@ -448,7 +437,6 @@ body{
 }
 @media (max-width: 1000px) {
     .articles_container {
-        display: grid;
         grid-template-columns: 1fr; /* Adjust the number of columns as needed */
     }
     .articles_left, .articles_right {
@@ -458,6 +446,12 @@ body{
         margin-top: 10vh;
     }
 }
+@media (max-width:768px){
+    .text_container{
+        margin-top: 4vh;
+    }
+}
+
 @keyframes flickFromLeft {
     0% {
         opacity: 0;
@@ -509,4 +503,23 @@ body{
     width: 100%;
     height: 1px; /* Adjust thickness */
     background-color: #d8a016; /* Choose your desired color */
+}
+
+.custom-margin {
+    margin-left: 5rem;
+}
+
+@media (max-width: 968px) {
+    .custom-margin {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .articles_item {
+        flex-direction: column; /* Ensure text appears below the image */
+    }
+    .text_container {
+        padding-top: 1rem; /* Adjust padding as needed */
+    }
 }
