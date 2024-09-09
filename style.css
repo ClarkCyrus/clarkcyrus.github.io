@@ -487,6 +487,11 @@ body{
     border-radius: 5px;
     font-weight: 600;
 }
+@media (max-width: 968px) {
+    .overlay-text {
+        font-size: 72px;
+    }
+}
 .brightness{
     filter: brightness(50%);
 }
@@ -521,5 +526,17 @@ body{
     }
     .text_container {
         padding-top: 1rem; /* Adjust padding as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 65px;
+        height: auto;
+    }
+
+    .logotext {
+        width: 165px;
+        height: auto;
     }
 }
