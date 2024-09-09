@@ -471,7 +471,7 @@ body{
 }
 
 #highest {
-    background-image: url('../Chatbot/images/historybg.png'); 
+    background-image: url('images/historybg.png'); 
     background-size: cover; 
     background-repeat: no-repeat;
 }
